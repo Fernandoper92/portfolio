@@ -1,0 +1,254 @@
+$black: #2d2d2d;
+$dark-gray: #363636;
+$gray: #d4d4d4;
+$gold: #ffc700;
+
+@mixin box-shadow() {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+@mixin flex-row-center() {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font: 100% verdana, arial, tahoma, sans-serif;
+    background-color: white;
+
+    h1 {
+        font-size: 3rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: $black;
+    }
+
+    input {
+        border: 0;
+        outline: 0;
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+
+    .side-nav {
+        height: 15.5em;
+        width: 3em;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        top: 10rem;
+        left: 1rem;
+        @include box-shadow();
+        box-sizing: border-box;
+        border-radius: 35px;
+        background-color: white;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .nav-container {
+            height: 13.6em;
+        }
+
+        .nav-iten-box {
+            width: 3em;
+            height: 4em;
+            list-style: none;
+            z-index: 1;
+
+            a {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                color: $black;
+                font-weight: 500;
+                z-index: 2;
+
+                .icon {
+                    position: relative;
+                    display: block;
+                    text-align: center;
+                    transition: 0.3s;
+                    font-size: 20px;
+                }
+
+                .title {
+                    position: absolute;
+                    left: 4em;
+                    background-color: white;
+                    width: max-content;
+                    padding: 5px 10px;
+                    border-radius: 6px;
+                    @include box-shadow();
+                    transition: 0.5s;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 2;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        background-color: white;
+                        bottom: 4px;
+                        left: 0;
+                        transform: rotate(45deg) translateX(-50%);
+                        z-index: 1;
+                    }
+                }
+            }
+
+            &.active a .icon {
+                color: white;
+            }
+
+            &:hover a .title {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &:nth-child(1).active ~ .indicator {
+                transform: translateY(calc(4em * 0));
+            }
+
+            &:nth-child(2).active ~ .indicator {
+                transform: translateY(calc(4em * 1));
+            }
+
+            &:nth-child(3).active ~ .indicator {
+                transform: translateY(calc(4em * 2));
+            }
+
+            &:nth-child(4).active ~ .indicator {
+                transform: translateY(calc(4em * 3));
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .nav-container .indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3em;
+            height: 3.5em;
+            transition: 0.2s;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 40px;
+                background-color: $black;
+                border-radius: 50%;
+                transition: 0.2s;
+            }
+        }
+    }
+
+    section {
+        height: max-content;
+        padding: 2.5em 10em;
+        display: flex;
+        flex-direction: column;
+
+        .section-title {
+            border-radius: 5px;
+            margin-bottom: 5em;
+            @include flex-row-center();
+
+            .open-close {
+                font-size: 3rem;
+            }
+        }
+
+        .flex {
+            @include flex-row-center();
+            text-align: center;
+        }
+
+        &.presentation {
+            height: 15rem;
+            @include flex-row-center();
+            justify-content: space-evenly;
+
+            .perfil-img {
+                height: 299px;
+                width: 215px;
+
+                img {
+                    filter: grayscale(100%);
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &.services {
+            background-color: $dark-gray;
+
+            h1,
+            h5,
+            p {
+                color: whitesmoke;
+            }
+
+            .flex {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                .card {
+                    padding: 1em;
+
+                    .card-img {
+                        margin: 10px;
+                        width: 10em;
+                        height: 10em;
+                        filter: grayscale(100);
+                    }
+                }
+            }
+        }
+
+        &.tecnologies {
+            background-color: whitesmoke;
+            
+            .item-box {
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                img {
+                    width: 3em;
+                    height: 3em;
+                }
+
+                p {
+                    padding: 0.2em;
+                    font-size: 0.9rem;
+                    background-color: #000000;
+                    color: white;
+                    border-radius: 0.3em;
+                }
+            }
+        }
+    }
+}

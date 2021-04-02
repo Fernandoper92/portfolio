@@ -1,0 +1,212 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  font: 100% verdana, arial, tahoma, sans-serif;
+  background-color: white;
+}
+body h1 {
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #2d2d2d;
+}
+body input {
+  border: 0;
+  outline: 0;
+}
+body input:focus {
+  outline: none !important;
+}
+body .side-nav {
+  height: 15.5em;
+  width: 3em;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  top: 10rem;
+  left: 1rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-sizing: border-box;
+  border-radius: 35px;
+  background-color: white;
+}
+body .side-nav * {
+  box-sizing: border-box;
+}
+body .side-nav .nav-container {
+  height: 13.6em;
+}
+body .side-nav .nav-iten-box {
+  width: 3em;
+  height: 4em;
+  list-style: none;
+  z-index: 1;
+}
+body .side-nav .nav-iten-box a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color: #2d2d2d;
+  font-weight: 500;
+  z-index: 2;
+}
+body .side-nav .nav-iten-box a .icon {
+  position: relative;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+  font-size: 20px;
+}
+body .side-nav .nav-iten-box a .title {
+  position: absolute;
+  left: 4em;
+  background-color: white;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 6px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+}
+body .side-nav .nav-iten-box a .title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  bottom: 4px;
+  left: 0;
+  transform: rotate(45deg) translateX(-50%);
+  z-index: 1;
+}
+body .side-nav .nav-iten-box.active a .icon {
+  color: white;
+}
+body .side-nav .nav-iten-box:hover a .title {
+  opacity: 1;
+  visibility: visible;
+}
+body .side-nav .nav-iten-box:nth-child(1).active ~ .indicator {
+  transform: translateY(calc(4em * 0));
+}
+body .side-nav .nav-iten-box:nth-child(2).active ~ .indicator {
+  transform: translateY(calc(4em * 1));
+}
+body .side-nav .nav-iten-box:nth-child(3).active ~ .indicator {
+  transform: translateY(calc(4em * 2));
+}
+body .side-nav .nav-iten-box:nth-child(4).active ~ .indicator {
+  transform: translateY(calc(4em * 3));
+}
+body .side-nav .nav-iten-box:hover {
+  cursor: pointer;
+}
+body .side-nav .nav-container .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 3.5em;
+  transition: 0.2s;
+}
+body .side-nav .nav-container .indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #2d2d2d;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+body section {
+  height: max-content;
+  padding: 2.5em 10em;
+  display: flex;
+  flex-direction: column;
+}
+body section .section-title {
+  border-radius: 5px;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body section .section-title .open-close {
+  font-size: 3rem;
+}
+body section .flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+body section.presentation {
+  height: 15rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body section.presentation .perfil-img {
+  height: 299px;
+  width: 215px;
+}
+body section.presentation .perfil-img img {
+  filter: grayscale(100%);
+  width: 100%;
+  height: auto;
+}
+body section.services {
+  background-color: #363636;
+}
+body section.services h1,
+body section.services h5,
+body section.services p {
+  color: whitesmoke;
+}
+body section.services .flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+body section.services .flex .card {
+  padding: 1em;
+}
+body section.services .flex .card .card-img {
+  margin: 10px;
+  width: 10em;
+  height: 10em;
+  filter: grayscale(100);
+}
+body section.tecnologies {
+  background-color: whitesmoke;
+}
+body section.tecnologies .item-box {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body section.tecnologies .item-box img {
+  width: 3em;
+  height: 3em;
+}
+body section.tecnologies .item-box p {
+  padding: 0.2em;
+  font-size: 0.9rem;
+  background-color: #000000;
+  color: white;
+  border-radius: 0.3em;
+}
+
+/*# sourceMappingURL=style.css.map */
