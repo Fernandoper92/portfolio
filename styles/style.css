@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 100% verdana, arial, tahoma, sans-serif;
   background-color: white;
@@ -140,6 +144,8 @@ body section .section-title {
   margin-bottom: 5em;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 body section .section-title .open-close {
@@ -148,13 +154,16 @@ body section .section-title .open-close {
 body section .flex {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
 body section.presentation {
-  height: 15rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -167,17 +176,16 @@ body section.presentation .perfil-img img {
   width: 100%;
   height: auto;
 }
+body section.presentation .presentation-text {
+  text-align: end;
+}
 body section.services {
-  background-color: #363636;
+  background-color: #2d2d2d;
 }
 body section.services h1,
 body section.services h5,
 body section.services p {
   color: whitesmoke;
-}
-body section.services .flex {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
 }
 body section.services .flex .card {
   padding: 1em;

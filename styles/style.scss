@@ -10,12 +10,18 @@ $gold: #ffc700;
 @mixin flex-row-center() {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
 * {
     margin: 0 auto;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -186,7 +192,6 @@ body {
         }
 
         &.presentation {
-            height: 15rem;
             @include flex-row-center();
             justify-content: space-evenly;
 
@@ -200,10 +205,14 @@ body {
                     height: auto;
                 }
             }
+
+            .presentation-text {
+                text-align: end;
+            }
         }
 
         &.services {
-            background-color: $dark-gray;
+            background-color: $black;
 
             h1,
             h5,
@@ -212,9 +221,6 @@ body {
             }
 
             .flex {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                
                 .card {
                     padding: 1em;
 
