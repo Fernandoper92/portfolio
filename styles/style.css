@@ -16,6 +16,10 @@ body h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #2d2d2d;
 }
+body p {
+  text-align: left;
+  margin: 1em;
+}
 body input {
   border: 0;
   outline: 0;
@@ -136,8 +140,6 @@ body .side-nav .nav-container .indicator::before {
 body section {
   height: max-content;
   padding: 2.5em 10em;
-  display: flex;
-  flex-direction: column;
 }
 body section .section-title {
   border-radius: 5px;
@@ -160,24 +162,34 @@ body section .flex {
   text-align: center;
 }
 body section.presentation {
+  background-image: url("../assets/imagem1.jpg");
+  background-position: bottom;
+}
+body section.presentation .presentation-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.551);
 }
-body section.presentation .perfil-img {
+body section.presentation .presentation-container h1, body section.presentation .presentation-container h5, body section.presentation .presentation-container p {
+  color: white;
+}
+body section.presentation .presentation-container .perfil-img {
   height: 299px;
   width: 215px;
 }
-body section.presentation .perfil-img img {
+body section.presentation .presentation-container .perfil-img img {
   filter: grayscale(100%);
   width: 100%;
   height: auto;
 }
-body section.presentation .presentation-text {
+body section.presentation .presentation-container .presentation-text {
   text-align: end;
+  width: 440px;
 }
 body section.services {
   background-color: #2d2d2d;
@@ -189,6 +201,7 @@ body section.services p {
 }
 body section.services .flex .card {
   padding: 1em;
+  width: 19em;
 }
 body section.services .flex .card .card-img {
   margin: 10px;
