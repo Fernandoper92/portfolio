@@ -2,13 +2,13 @@
 let projects = [
     {
         name: "Pokeinfo",
-        img: "C:/Users/Usuario/Desktop/portfolio/assets/projects/pokeinfo.png",
+        img: "./assets/projects/pokeinfo.png",
         description: "Um catálogo de pokémons",
         tools: "Angular, Typescript, Bootstrap, API PokeAPI"
     },
     {
         name: "Gerenciador de Almoxarifado",
-        img: "C:/Users/Usuario/Desktop/portfolio/assets/projects/gerenciador-almoxarifado.png",
+        img: "./assets/projects/gerenciador-almoxarifado.png",
         description: "Um Gerenciador de almoxarifado",
         tools: "Angular,Typescript, Angular Material, Firebase"
     }
