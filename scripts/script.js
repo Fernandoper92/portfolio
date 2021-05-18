@@ -32,12 +32,9 @@ function Project(name, img, description, tools) {
     this.description = description;
     this.tools = tools;
 }
-    document.getElementById("projects-cards").innerHTML = projects.map(function (project) {
-        return `<div class="project-card">
+document.getElementById("projects-cards").innerHTML = projects.map(function (project) {
+    return `<div class="project-card">
+    <img class ="project-img" src="${project.img}">
         <h3 class="project-name">${project.name}</h3>
-        <img class ="project-img" src="${project.img}">
         </div>`;
-    })
-
-console.log(projects)
-
+})
