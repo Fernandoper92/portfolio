@@ -1,18 +1,4 @@
 
-let projects = [
-    {
-        name: "Pokeinfo",
-        img: "./assets/projects/pokeinfo.png",
-        description: "Um catálogo de pokémons",
-        tools: "Angular, Typescript, Bootstrap, API PokeAPI"
-    },
-    {
-        name: "Gerenciador de Almoxarifado",
-        img: "./assets/projects/gerenciador-almoxarifado.png",
-        description: "Um Gerenciador de almoxarifado",
-        tools: "Angular,Typescript, Angular Material, Firebase"
-    }
-];
 
 let list = document.querySelectorAll('.nav-iten-box');
 
@@ -25,16 +11,3 @@ for (let i = 0; i < list.length; i++) {
         list[i].className = 'nav-iten-box active'
     }
 }
-
-function Project(name, img, description, tools) {
-    this.name = name;
-    this.img = img;
-    this.description = description;
-    this.tools = tools;
-}
-document.getElementById("projects-cards").innerHTML = projects.map(function (project) {
-    return `<div class="project-card">
-    <img class ="project-img" src="${project.img}">
-        <h3 class="project-name">${project.name}</h3>
-        </div>`;
-})
