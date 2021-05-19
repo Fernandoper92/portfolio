@@ -48,7 +48,6 @@ body {
         max-width: 1400px;
         overflow: hidden;
         position: fixed;
-        height: 50px;
         width: 100%;
         background-image: url("../assets/imagem1.jpg");
         background-position: bottom;
@@ -92,7 +91,6 @@ body {
     section {
         height: max-content;
         padding: 5% 10%;
-        // border-bottom: 1px dashed dimgray;
 
         .section-title {
             border-radius: 5px;
@@ -159,6 +157,10 @@ body {
                         margin: 10px;
                         width: 5em;
                         height: 5em;
+                    }
+
+                    p {
+                        text-align: center
                     }
                 }
             }

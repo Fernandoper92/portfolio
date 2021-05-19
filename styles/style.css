@@ -32,7 +32,6 @@ body .topnav {
   max-width: 1400px;
   overflow: hidden;
   position: fixed;
-  height: 50px;
   width: 100%;
   background-image: url("../assets/imagem1.jpg");
   background-position: bottom;
@@ -139,6 +138,9 @@ body section.services .flex .card .card-img {
   margin: 10px;
   width: 5em;
   height: 5em;
+}
+body section.services .flex .card p {
+  text-align: center;
 }
 body section.projects .projects-cards {
   display: flex;
