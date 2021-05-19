@@ -13,68 +13,19 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar">
-        <ul class="nav-container">
-            <li class="nav-iten-box active">
-                <a href="#presentation">
-                    <span class="icon">
-                        <i class="fas fa-home"></i>
-                    </span>
-                    <span class="title">Inicio</span>
-                </a>
-            </li>
-            <li class="nav-iten-box">
-                <a href="#services">
-                    <span class="icon">
-                        <i class="fas fa-th-large"></i>
-                    </span>
-                    <span class="title">Serviços</span>
-                </a>
-            </li>
-            <li class="nav-iten-box">
-                <a>
-                    <span class="icon">
-                        <i class="fas fa-list-alt"></i>
-                    </span>
-                    <span class="title">Trabalhos</span>
-                </a>
-            </li>
-            <li class="nav-iten-box">
-                <a href="#projects">
-                    <span class="icon">
-                        <i class="fas fa-folder"></i>
-                    </span>
-                    <span class="title">Projetos Pessoais</span>
-                </a>
-            </li>
-            <li class="nav-iten-box">
-                <a href="#skills">
-                    <span class="icon">
-                        <i class="fas fa-code"></i>
-                    </span>
-                    <span class="title">Habilidades</span>
-                </a>
-            </li>
-            <div class="indicator"></div>
-        </ul>
-    </nav> -->
-    <nav class="navbar-container">
-        <div class="title-container">
-            <h3 class="title">Portfólio</h3>
-        </div>
-        <div class="navbar">
-            <a href="#presentation">Inicio
+
+    <div class="topnav" id="myTopnav">
+            <a href="#" class="logo">Portfólio</a>
+            <a href="#presentation"onclick="myFunction()">Inicio</a>
+            <a href="#services"onclick="myFunction()">Serviços</a>
+            <a>Trabalhos</a>
+            <a href="#projects"onclick="myFunction()">Projetos Pessoais</a>
+            <a href="#skills"onclick="myFunction()">Habilidades</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
             </a>
-            <a href="#services">Serviços
-            </a>
-            <a>Trabalhos
-            </a>
-            <a href="#projects">Projetos Pessoais
-            </a>
-            <a href="#skills">Habilidades
-            </a>
-        </div>
-    </nav>
+    </div>
+
     <main class="main">
         <section class="presentation" id="presentation">
             <div class="presentation-container">
@@ -102,7 +53,8 @@
                     ullamcorper volutpat, velit nulla semper magna, et egestas risus eros at lectus. Nulla porta
                     libero
                     id nisl mattis dictum.</p>
-                <p class="text">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis
+                <p class="text">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                    himenaeos. Duis
                     sit
                     amet libero eu purus pharetra placerat ut non orci.</p>
             </div>
@@ -115,36 +67,31 @@
             </div>
             <div class="flex">
                 <div class="card">
-                    <img class="card-img"
-                        src="./assets/services/001-front-end.png"/>
+                    <img class="card-img" src="./assets/services/001-front-end.png" />
                     <h5>Programação Front-end</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum nisl non nunc
                         rutrum posuere. </p>
                 </div>
                 <div class="card">
-                    <img class="card-img"
-                        src="./assets/services/007-prototype.png" />
+                    <img class="card-img" src="./assets/services/007-prototype.png" />
                     <h5>Websites</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum nisl non nunc
                         rutrum posuere. </p>
                 </div>
                 <div class="card">
-                    <img class="card-img"
-                        src="./assets/services/008-rhythm.png" />
+                    <img class="card-img" src="./assets/services/008-rhythm.png" />
                     <h5>Front-end de Plataformas Web</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum nisl non nunc
                         rutrum posuere. </p>
                 </div>
                 <div class="card">
-                    <img class="card-img"
-                        src="./assets/services/006-responsive-design.png" />
+                    <img class="card-img" src="./assets/services/006-responsive-design.png" />
                     <h5>Design Responsivo</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum nisl non nunc
                         rutrum posuere. </p>
                 </div>
                 <div class="card">
-                    <img class="card-img"
-                        src="./assets/services/004-mockup.png" />
+                    <img class="card-img" src="./assets/services/004-mockup.png" />
                     <h5>Landing Pages</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum nisl non nunc
                         rutrum posuere. </p>
@@ -158,14 +105,33 @@
                 <h1>Projetos Pessoais</h1>
             </div>
             <div class="projects-cards" id="projects-cards">
-<div class="project-card">
-    <img class ="project-img" src="./assets/projects/pokeinfo.png">
-        <h3 class="project-name">Catálogo de Pokémons</h3>
-        </div>
-<div class="project-card">
-    <img class ="project-img" src="./assets/projects/gerenciador-almoxarifado.png">
-        <h3 class="project-name">Gerenciador de Estoque</h3>
-        </div>
+                <div class="project-card">
+                    <img class="project-img" src="./assets/projects/pokeinfo.png">
+                    <div class="project-info">
+                    <h3 class="project-name">Catálogo de Pokémons</h3>
+                    <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Tecnologias: Angular, Typescript, Sass, Bootstrap, PokeAPI, Firebase</p>
+                    <a href="https://github.com/Fernandoper92/PokeInfo" class="github">Github</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-img" src="./assets/projects/gerenciador-almoxarifado.png">
+                    <div class="project-info">
+                    <h3 class="project-name">Gerenciador de Estoque</h3>
+                    <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Tecnologias: Angular, Typescript, Sass, Bootstrap, Angular Material, Firebase</p>
+                    <a href="https://github.com/Fernandoper92/gerenciador-almoxarifado" class="github">Github</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-img" src="./assets/projects/portfolio.png">
+                    <div class="project-info">
+                        <h3 class="project-name">Meu Portfólio</h3>
+                        <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Tecnologias: html5, Sass, javascript, Github Pages</p>
+                        <a href="https://github.com/Fernandoper92/portfolio" class="github">Github</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -175,36 +141,45 @@
             </div>
             <div class="flex">
                 <div class="item-box">
-                    <img src="https://img.icons8.com/material-sharp/100/000000/html-5.png" />
-                    <p>HTML 5</p>
+                    <img src="./assets/skills/html.png" />
+                    <p>HTML5</p>
                 </div>
                 <div class="item-box">
-                    <img src="https://img.icons8.com/material/100/000000/css3.png" />
+                    <img src="./assets/skills/css.png" />
                     <p>CSS3</p>
                 </div>
                 <div class="item-box">
-                    <img src="https://img.icons8.com/material-sharp/100/000000/sass.png" />
-                    <p>SASS/SCSS</p>
+                    <img src="./assets/skills/sass.png" />
+                    <p>SASS</p>
                 </div>
                 <div class="item-box">
-                    <img src="https://img.icons8.com/ios-filled/100/000000/javascript.png" />
+                    <img src="./assets/skills/javascript.png" />
                     <p>Javascript</p>
                 </div>
                 <div class="item-box">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/typescript.png" />
+                    <img src="./assets/skills/typescript.png" />
                     <p>Typescript</p>
                 </div>
                 <div class="item-box">
-                    <img src="https://img.icons8.com/ios-filled/100/000000/angularjs.png" />
+                    <img src="./assets/skills/angular.png" />
                     <p>Angular</p>
+                </div>
+                <div class="item-box">
+                    <img src="./assets/skills/github.png" />
+                    <p>Github</p>
+                </div>
+                <div class="item-box">
+                    <img src="./assets/skills/firebase.png" />
+                    <p>Firebase</p>
                 </div>
             </div>
         </section>
     </main>
     <script type="text/javascript" src="./scripts/script.js"></script>
+    <footer>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
 </body>
-<footer>
-    <div>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-</footer>
 
 </html>

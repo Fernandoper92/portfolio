@@ -8,14 +8,13 @@ html {
 }
 
 body {
-  margin-top: 3em;
   font: 100% verdana, arial, tahoma, sans-serif;
   background-color: white;
+  max-width: 1400px;
 }
 body h1 {
   font-size: 2.5rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: black;
 }
 body p {
   text-align: left;
@@ -29,46 +28,45 @@ body input {
 body input:focus {
   outline: none !important;
 }
-body .navbar-container {
-  display: flex;
-  flex-direction: row;
+body .topnav {
+  max-width: 1400px;
   overflow: hidden;
   position: fixed;
-  top: 0;
-  height: 3em;
+  height: 50px;
   width: 100%;
-  align-content: center;
   background-image: url("../assets/imagem1.jpg");
   background-position: bottom;
   border-bottom: 1px solid white;
   z-index: 10;
+  transition: top 0.3s;
 }
-body .navbar-container .title-container {
-  width: 30%;
-  background-color: rgba(0, 0, 0, 0.551);
-  display: flex;
+body .topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
-  align-items: center;
-}
-body .navbar-container .title-container .title {
-  color: white;
-  align-self: center;
-}
-body .navbar-container .navbar {
-  width: 70%;
-  background-color: rgba(0, 0, 0, 0.551);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-body .navbar-container .navbar a {
-  margin: 0 10px;
-  color: white;
+  padding: 14px 16px;
   text-decoration: none;
-  align-self: center;
+  font-size: 17px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-body .navbar-container .navbar a:hover {
+body .topnav a.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+  cursor: default;
+  pointer-events: none;
+}
+body .topnav a:hover {
   color: gray;
+}
+body .topnav a.icon {
+  display: none;
+}
+body .topnav a:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body .topnav a::after {
+  color: white;
 }
 body section {
   height: max-content;
@@ -152,27 +150,58 @@ body section.projects .projects-cards {
 body section.projects .projects-cards .project-card {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   position: relative;
-  margin: 5px;
-  width: 25em;
+  margin: 1em;
+  width: 30em;
   height: auto;
 }
 body section.projects .projects-cards .project-card img {
   width: 100%;
-  height: 75%;
+  height: 100%;
 }
-body section.projects .projects-cards .project-card .project-name {
+body section.projects .projects-cards .project-card .project-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
 }
-body section.projects .projects-cards .project-card:hover .project-name {
+body section.projects .projects-cards .project-card .project-info p {
+  color: white;
+}
+body section.projects .projects-cards .project-card .project-info .github {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  transition: 0.3s ease-in-out;
+}
+body section.projects .projects-cards .project-card .project-info .github:hover {
+  background: linear-gradient(to bottom, #c6c5c5 5%, #e6e6e6 100%);
+  background-color: #e9e9e9;
+}
+body section.projects .projects-cards .project-card .project-info .github:active {
+  background: linear-gradient(to bottom, #bab9b9 5%, #858585 100%);
+  background-color: #414040;
+}
+body section.projects .projects-cards .project-card:hover .project-info {
   visibility: visible;
   opacity: 1;
 }
@@ -180,6 +209,7 @@ body section.tecnologies {
   background-color: whitesmoke;
 }
 body section.tecnologies .item-box {
+  width: 7em;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -190,11 +220,39 @@ body section.tecnologies .item-box img {
   height: 3em;
 }
 body section.tecnologies .item-box p {
-  padding: 0.2em;
+  text-align: center;
   font-size: 0.9rem;
-  background-color: #000000;
-  color: white;
-  border-radius: 0.3em;
+  color: black;
+  font-weight: bold;
+}
+body footer {
+  padding: 1.5em;
+}
+body footer div a {
+  color: black;
+}
+
+@media screen and (max-width: 720px) {
+  body .topnav a:not(:first-child) {
+    display: none;
+  }
+  body .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  body .topnav.responsive {
+    position: fixed;
+  }
+  body .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  body .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
