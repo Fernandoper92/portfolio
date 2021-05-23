@@ -51,7 +51,14 @@
                     himenaeos. Duis
                     sit
                     amet libero eu purus pharetra placerat ut non orci.</p>
+                <div class="perfil-social">
+                    <a href="https://www.linkedin.com/in/fernandopereira92" target=”_blank”><img
+                            src="./assets/social/001-linkedin.png" alt=""></a>
+                    <a href="https://github.com/Fernandoper92" target=”_blank”><img src="./assets/social/002-github.png"
+                            alt=""></a>
+                </div>
             </div>
+
         </section>
 
         <section class="services" id="services">
@@ -90,6 +97,12 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum nisl non nunc
                         rutrum posuere. </p>
                 </div>
+                <div class="card">
+                    <img class="card-img" src="./assets/services/010-quality-assurance.png" />
+                    <h5>Manutenção de Sites</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum nisl non nunc
+                        rutrum posuere. </p>
+                </div>
             </div>
         </section>
 
@@ -102,12 +115,13 @@
                 <div class="project-card">
                     <img class="project-img" src="./assets/projects/pokeinfo.png">
                     <div class="project-info web" id="project-info">
-                        <h3 class="project-name">Catálogo de Pokémons</h3>
-                        <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3 class="project-name">Pokéinfo</h3>
+                        <p>Descrição: Um catálogo de pokémons com busca por nome e filtro.</p>
                         <p>Tecnologias: Angular, Typescript, Sass, Bootstrap, PokeAPI, Firebase</p>
                         <div class="btn-flex-container">
-                            <a href="https://github.com/Fernandoper92/PokeInfo" target=”_blank” class="github">Github</a>
-                            <a href="https://pokeinfo-d008f.firebaseapp.com/"  target=”_blank” class="github">Website</a>
+                            <a href="https://github.com/Fernandoper92/PokeInfo" target=”_blank”
+                                class="btn">Github</a>
+                            <a href="https://pokeinfo-d008f.firebaseapp.com/" target=”_blank” class="btn">Website</a>
                         </div>
                     </div>
                 </div>
@@ -115,12 +129,13 @@
                     <img class="project-img" src="./assets/projects/gerenciador-almoxarifado.png">
                     <div class="project-info web" id="project-info">
                         <h3 class="project-name">Gerenciador de Estoque</h3>
-                        <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Descrição: Um gerenciador focado na facilidade para movimentar estoque e sem NF.</p>
                         <p>Tecnologias: Angular, Typescript, Sass, Bootstrap, Angular Material, Firebase</p>
                         <div class="btn-flex-container">
                             <a href="https://github.com/Fernandoper92/gerenciador-almoxarifado" target=”_blank”
-                                class="github">Github</a>
-                            <a href="https://gerenciador-estoque-1d86a.firebaseapp.com/" target=”_blank” class="github">Website</a>
+                                class="btn">Github</a>
+                            <a href="https://gerenciador-estoque-1d86a.firebaseapp.com/" target=”_blank”
+                                class="btn">Website</a>
                         </div>
                     </div>
                 </div>
@@ -128,11 +143,13 @@
                     <img class="project-img" src="./assets/projects/portfolio.png">
                     <div class="project-info web" id="project-info">
                         <h3 class="project-name">Meu Portfólio</h3>
-                        <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Descrição: Minha página pessoal para divulgação dos meus trabalhos e projetos pessoais.</p>
                         <p>Tecnologias: html5, Sass, javascript, Github Pages</p>
                         <div class="btn-flex-container">
-                            <a href="https://github.com/Fernandoper92/portfolio" target=”_blank” class="github">Github</a>
-                            <a href="https://fernandoper92.github.io/portfolio" target=”_blank” class="github">Website</a>
+                            <a href="https://github.com/Fernandoper92/portfolio" target=”_blank”
+                                class="btn">Github</a>
+                            <a href="https://fernandoper92.github.io/portfolio" target=”_blank”
+                                class="btn">Website</a>
                         </div>
                     </div>
                 </div>
@@ -178,11 +195,36 @@
                 </div>
             </div>
         </section>
+        <section class="contact">
+            <div class="section-title">
+                <h1>Entre em Contato</h1>
+            </div>
+            <form class="form" action="">
+                <div class="name-box">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="">
+                </div>
+
+                <div class="email-box">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="">
+                </div>
+                <div class="subject-box">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" placeholder="">
+                </div>
+
+                <textarea id="text" name="text" placeholder="Sua mensagem.." style="height:200px"></textarea>
+
+                <button class="btn" type="submit" value="Submit">Enviar</button>
+            </form>
+        </section>
     </main>
     <script type="text/javascript" src="./scripts/script.js"></script>
     <footer>
         <div>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from
-            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
     </footer>
 </body>
 
