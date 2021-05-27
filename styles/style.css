@@ -17,11 +17,11 @@ body h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 body h5 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 body p {
   text-align: left;
-  margin: 1em;
+  margin: 1rem;
   color: dimgray;
 }
 body input {
@@ -32,22 +32,23 @@ body input:focus {
   outline: none !important;
 }
 body .topnav {
+  display: flex;
+  flex-direction: row;
   max-width: 1400px;
-  overflow: hidden;
   position: fixed;
   width: 100%;
   background-image: url("../assets/imagem1.jpg");
   background-position: bottom;
   border-bottom: 1px solid white;
   z-index: 10;
-  transition: top 0.3s;
 }
 body .topnav a {
-  float: left;
+  white-space: nowrap;
   display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
+  margin: 0;
   text-decoration: none;
   font-size: 17px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -75,11 +76,11 @@ body .topnav a::after {
 }
 body section {
   height: max-content;
-  padding: 5% 10%;
+  padding: 2% 10% 5% 10%;
 }
 body section .section-title {
   border-radius: 5px;
-  margin-bottom: 5em;
+  margin-bottom: 3em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -150,8 +151,8 @@ body section.services {
   background-color: whitesmoke;
 }
 body section.services .flex .card {
-  padding: 1em;
   width: 17em;
+  margin: auto;
 }
 body section.services .flex .card .card-img {
   filter: grayscale(100);
@@ -256,32 +257,61 @@ body section.tecnologies .item-box p {
   color: black;
   font-weight: bold;
 }
-body section.contact form {
+body section.contact {
+  display: flex;
+  flex-direction: column;
+}
+body section.contact .section-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body section.contact .section-content .phone-email {
+  margin: 1em;
+  width: auto;
+}
+body section.contact .section-content .phone-email ul {
+  list-style-type: none;
+}
+body section.contact .section-content .phone-email ul li {
+  display: flex;
+  flex-direction: row;
+  height: 3em;
+  align-items: center;
+}
+body section.contact .section-content .phone-email ul li img {
+  height: 2em;
+  margin: 0;
+}
+body section.contact .section-content form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   font-family: inherit;
+  margin: 1em;
+  width: 50%;
 }
-body section.contact form textarea {
+body section.contact .section-content form textarea {
   width: 100%;
   padding: 10px;
   margin: 10px;
   border: 1px solid #c9c8c8;
   font-size: 16px;
 }
-body section.contact form div {
+body section.contact .section-content form div {
   margin: 0;
   padding: 10px;
 }
-body section.contact form div label {
+body section.contact .section-content form div label {
   color: dimgray;
 }
-body section.contact form div input {
+body section.contact .section-content form div input {
   border-bottom: 1px solid #c9c8c8;
   width: 250px;
   font-size: 16px;
 }
-body section.contact form .btn {
+body section.contact .section-content form .btn {
   display: inline-block;
   cursor: pointer;
   font-family: Arial;
@@ -295,7 +325,7 @@ body section.contact form .btn {
   color: white;
   border: none;
 }
-body section.contact form .btn:hover {
+body section.contact .section-content form .btn:hover {
   background-color: #141414;
 }
 body footer {
@@ -305,21 +335,28 @@ body footer div a {
   color: black;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
+  body .topnav {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+  }
+  body .topnav a {
+    margin: 0;
+    text-align: left;
+  }
   body .topnav a:not(:first-child) {
     display: none;
   }
   body .topnav a.icon {
-    float: right;
     display: block;
-  }
-  body .topnav.responsive {
-    position: fixed;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   body .topnav.responsive a {
-    float: none;
     display: block;
-    text-align: left;
   }
   body .topnav.responsive a.icon {
     position: absolute;
@@ -343,6 +380,36 @@ body footer div a {
     opacity: initial;
     visibility: initial;
     color: black;
+  }
+  body section.contact .section-content form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  body p, body label {
+    font-size: 12px;
+  }
+  body h1 {
+    font-size: 2rem;
+  }
+  body h5 {
+    font-size: 1rem;
+  }
+  body section {
+    padding: 3%;
+  }
+  body section.contact .section-content .phone-email ul li {
+    height: 2em;
+  }
+  body section.contact .section-content .phone-email ul li img {
+    height: 1em;
+    margin: 0;
+  }
+  body section.contact .section-content form div input {
+    width: initial;
+  }
+  body section.contact .section-content form textarea {
+    font-size: 12px;
   }
 }
 
