@@ -30,12 +30,12 @@ body {
     }
 
     h5 {
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
 
     p {
         text-align: left;
-        margin: 1em;
+        margin: 1rem;
         color: dimgray;
     }
 
@@ -49,22 +49,23 @@ body {
     }
 
     .topnav {
+        display: flex;
+        flex-direction: row;
         max-width: 1400px;
-        overflow: hidden;
         position: fixed;
         width: 100%;
         background-image: url("../assets/imagem1.jpg");
         background-position: bottom;
         border-bottom: 1px solid white;
         z-index: 10;
-        transition: top 0.3s;
 
         a {
-            float: left;
+            white-space: nowrap;
             display: block;
             color: #f2f2f2;
             text-align: center;
             padding: 14px 16px;
+            margin: 0;
             text-decoration: none;
             font-size: 17px;
             background-color: rgba(0, 0, 0, 0.7);
@@ -98,11 +99,11 @@ body {
 
     section {
         height: max-content;
-        padding: 5% 10%;
+        padding: 2% 10% 5% 10%;
 
         .section-title {
             border-radius: 5px;
-            margin-bottom: 5em;
+            margin-bottom: 3em;
             @include flex-row-center();
         }
 
@@ -175,8 +176,8 @@ body {
 
             .flex {
                 .card {
-                    padding: 1em;
                     width: 17em;
+                    margin: auto;
 
                     .card-img {
                         filter: grayscale(100);
@@ -300,51 +301,83 @@ body {
         }
 
         &.contact {
-            form {
+            display: flex;
+            flex-direction: column;
+
+            .section-content {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                font-family: inherit;
+                justify-content: center;
 
-                textarea {
-                    width: 100%;
-                    padding: 10px;
-                    margin: 10px;
-                    border: 1px solid rgb(201, 200, 200);
-                    font-size: 16px;
+                .phone-email {
+                    margin: 1em;
+                    width: auto;
+
+                    ul {
+                        list-style-type: none;
+                        li {
+                            display: flex;
+                            flex-direction: row;
+                            height: 3em;
+                            align-items: center;
+
+                            img {
+                                height: 2em;
+                                margin: 0;
+                            }
+                        }
+                    }
                 }
 
-                div {
-                    margin: 0;
-                    padding: 10px;
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    font-family: inherit;
+                    margin: 1em;
+                    width: 50%;
 
-                    label {
-                        color: dimgray;
-                    }
-
-                    input {
-                        border-bottom: 1px solid rgb(201, 200, 200);
-                        width: 250px;
+                    textarea {
+                        width: 100%;
+                        padding: 10px;
+                        margin: 10px;
+                        border: 1px solid rgb(201, 200, 200);
                         font-size: 16px;
                     }
-                }
 
-                .btn {
-                    display: inline-block;
-                    cursor: pointer;
-                    font-family: Arial;
-                    font-size: 15px;
-                    font-weight: bold;
-                    padding: 6px 24px;
-                    text-decoration: none;
-                    transition: 0.3s ease-in-out;
-                    margin: 10px;
-                    background-color: black;
-                    color: white;
-                    border: none;
+                    div {
+                        margin: 0;
+                        padding: 10px;
 
-                    &:hover {
-                        background-color: rgb(20, 20, 20);
+                        label {
+                            color: dimgray;
+                        }
+
+                        input {
+                            border-bottom: 1px solid rgb(201, 200, 200);
+                            width: 250px;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .btn {
+                        display: inline-block;
+                        cursor: pointer;
+                        font-family: Arial;
+                        font-size: 15px;
+                        font-weight: bold;
+                        padding: 6px 24px;
+                        text-decoration: none;
+                        transition: 0.3s ease-in-out;
+                        margin: 10px;
+                        background-color: black;
+                        color: white;
+                        border: none;
+
+                        &:hover {
+                            background-color: rgb(20, 20, 20);
+                        }
                     }
                 }
             }
@@ -359,27 +392,32 @@ body {
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
     body {
         .topnav {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            width: 100%;
             a {
+                margin: 0;
+                text-align: left;
+
                 &:not(:first-child) {
                     display: none;
                 }
 
                 &.icon {
-                    float: right;
                     display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
                 }
             }
 
             &.responsive {
-                position: fixed;
-
                 a {
-                    float: none;
                     display: block;
-                    text-align: left;
 
                     &.icon {
                         position: absolute;
@@ -423,6 +461,61 @@ body {
                                 visibility: initial;
                                 color: black;
                             }
+                        }
+                    }
+                }
+            }
+            &.contact {
+                .section-content {
+                    form {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        p, label {
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h5 {
+            font-size: 1rem;
+        }
+
+        section {
+            padding: 3%;
+
+            &.contact {
+                .section-content {
+
+                    .phone-email {
+    
+                        ul {
+                            li {
+                                height: 2em;
+    
+                                img {
+                                    height: 1em;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                    form {
+                        div {
+                            input {
+                                width: initial;
+                            }
+                        }
+
+                        textarea {
+                            font-size: 12px;
                         }
                     }
                 }
