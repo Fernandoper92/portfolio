@@ -49,6 +49,7 @@ body {
     }
 
     .topnav {
+        padding: 1px;
         display: flex;
         flex-direction: row;
         max-width: 1400px;
@@ -165,6 +166,11 @@ body {
                         a > img {
                             height: 2em;
                             margin: 16px;
+                            opacity: 0.5;
+
+                            &:hover {
+                                opacity: 1;
+                            }
                         }
                     }
                 }
@@ -395,12 +401,9 @@ body {
 @media screen and (max-width: 840px) {
     body {
         .topnav {
-            display: flex;
             flex-direction: column;
             justify-content: left;
-            width: 100%;
             a {
-                margin: 0;
                 text-align: left;
 
                 &:not(:first-child) {
@@ -478,7 +481,8 @@ body {
 
 @media screen and (max-width: 400px) {
     body {
-        p, label {
+        p,
+        label {
             font-size: 12px;
         }
         h1 {
@@ -493,13 +497,11 @@ body {
 
             &.contact {
                 .section-content {
-
                     .phone-email {
-    
                         ul {
                             li {
                                 height: 2em;
-    
+
                                 img {
                                     height: 1em;
                                     margin: 0;

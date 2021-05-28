@@ -32,6 +32,7 @@ body input:focus {
   outline: none !important;
 }
 body .topnav {
+  padding: 1px;
   display: flex;
   flex-direction: row;
   max-width: 1400px;
@@ -146,6 +147,10 @@ body section.perfil div.perfil-text .perfil-social {
 body section.perfil div.perfil-text .perfil-social a > img {
   height: 2em;
   margin: 16px;
+  opacity: 0.5;
+}
+body section.perfil div.perfil-text .perfil-social a > img:hover {
+  opacity: 1;
 }
 body section.services {
   background-color: whitesmoke;
@@ -337,13 +342,10 @@ body footer div a {
 
 @media screen and (max-width: 840px) {
   body .topnav {
-    display: flex;
     flex-direction: column;
     justify-content: left;
-    width: 100%;
   }
   body .topnav a {
-    margin: 0;
     text-align: left;
   }
   body .topnav a:not(:first-child) {
@@ -386,7 +388,8 @@ body footer div a {
   }
 }
 @media screen and (max-width: 400px) {
-  body p, body label {
+  body p,
+body label {
     font-size: 12px;
   }
   body h1 {
