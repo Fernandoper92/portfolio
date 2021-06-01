@@ -108,7 +108,7 @@ body section.presentation .presentation-container {
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
-  padding: 5em;
+  padding: 7em 5em 5em;
   background-color: rgba(0, 0, 0, 0.551);
 }
 body section.presentation .presentation-container h1,
@@ -116,6 +116,16 @@ body section.presentation .presentation-container h5,
 body section.presentation .presentation-container p {
   color: white;
   text-align: center;
+}
+body section.presentation .presentation-container .presentation-text .presentation-title {
+  font-size: 5rem;
+}
+body section.presentation .presentation-container .presentation-text .presentation-text {
+  color: #d3cfcf;
+  font-size: 1.5rem;
+}
+body section.presentation .presentation-container .presentation-text .presentation-text b {
+  color: white;
 }
 body section.perfil {
   display: flex;
@@ -364,6 +374,19 @@ body footer div a {
     position: absolute;
     right: 0;
     top: 0;
+  }
+  body section.presentation .presentation-container {
+    padding: 5em 1em 1em;
+  }
+  body section.presentation .presentation-container .presentation-text .presentation-title {
+    font-size: 2rem;
+  }
+  body section.presentation .presentation-container .presentation-text .presentation-text {
+    color: #d3cfcf;
+    font-size: 1rem;
+  }
+  body section.presentation .presentation-container .presentation-text .presentation-text b {
+    color: white;
   }
   body section.perfil div.perfil-text {
     width: 100%;

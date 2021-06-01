@@ -121,7 +121,7 @@ body {
             .presentation-container {
                 @include flex-row-center();
                 justify-content: space-evenly;
-                padding: 5em;
+                padding: 7em 5em 5em;
                 background-color: rgba(0, 0, 0, 0.551);
 
                 h1,
@@ -129,6 +129,21 @@ body {
                 p {
                     color: white;
                     text-align: center;
+                }
+
+                .presentation-text {
+                    .presentation-title {
+                        font-size: 5rem;
+                    }
+
+                    .presentation-text {
+                        color: rgb(211, 207, 207)   ;
+                        font-size: 1.5rem;
+
+                        b {
+                            color: white;
+                        }
+                    }
                 }
             }
         }
@@ -432,6 +447,28 @@ body {
         }
 
         section {
+
+            &.presentation {
+                .presentation-container {
+                padding: 5em 1em 1em;
+                    .presentation-text {
+                        .presentation-title {
+                            font-size: 2rem;
+                        }
+    
+                        .presentation-text {
+                            color: rgb(211, 207, 207)   ;
+                            font-size: 1rem;
+    
+                            b {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+    
+
             &.perfil {
                 div {
                     &.perfil-text {
